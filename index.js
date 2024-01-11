@@ -6,13 +6,13 @@ const date3 = document.getElementById("date3")
 let  date = [
  date1, date2, date3
 ]
+const place = document.getElementById("nombrePlaces")
 submit.addEventListener("click", enregistrerForm)
 
 function enregistrerForm(){
 
-    
+    alert("merci d'avoir enregistrer les dates et les places" )
 
 
-    
 
 }

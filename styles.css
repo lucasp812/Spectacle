@@ -60,4 +60,25 @@ input[type="submit"]:hover {
     background-color: #5645a0;
 }
 
-/* Ajoutez d'autres styles CSS selon vos besoins */
+/* Ajoutez ces styles à la fin de votre fichier CSS */
+
+/* Ajoutez ces styles à la fin de votre fichier CSS */
+
+#plus {
+    width: 50px; /* Ajustez la largeur selon vos besoins */
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+    border-radius: 50%; /* Rend le bouton rond */
+    background-color: #3ec74c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Ajustez la taille de la police selon vos besoins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+}
+
+#plus:hover {
+    background-color: #5645a0;
+}
