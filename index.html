@@ -1,0 +1,44 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Réservation de Spectacle</title>
+    </head>
+    <body>
+    
+        <h1>Réservation de place de spectacle</h1>
+    
+        <form action="/process_reservation" method="post"> 
+     
+            <label for="date">Choisissez une date :</label>
+            <select name="date" id="date">
+                <option value="date1">10 fevrier 2024</option>
+                <option value="date2">15 fevrier 2024</option>
+                <option value="date3">20 fevrier 2024</option>
+            </select>
+    
+            <br>
+    
+    
+            <label for="nombrePlaces">Nombre de places :</label>
+            <input type="number" name="nombrePlaces" id="nombrePlaces" min="1" required>
+    
+            <br>
+    
+  
+    
+            <br>
+            <input type="button" name="" id="plus" value="Ajouter d'autres date">
+            <input type="submit" value="Réserver" id="reserver">
+    
+        </form>
+    
+    </body>
+    </html>
+    
+<script src="index.js"></script>    
+</body>
+</html>

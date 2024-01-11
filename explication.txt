@@ -1,0 +1,12 @@
+Ce programme permet de reserver les dates d'un spectacle avec le nombre de 
+place, on peut cliquer sur le bouton ajouter d'autres date pour avoir plusieurs reservation.
+Quand on cliqur sur enregistrer les places et dates sont reserver 
+
+Structuration du projet : 
+    1- Creer une page HTML avec un formulaire avec un Select avec les dates disponible,
+    un input text pour saisir le nombre de place, un input de type bouton pour pouvoir
+    rajouter d'autres date et un bouton submit pour valider le formulaire
+
+    2-Creation du css 
+
+    3- Creation du fichier JS pour pouvoir rajouter les places 
