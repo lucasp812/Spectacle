@@ -1,7 +1,6 @@
 let submit = document.getElementById("reserver");
 const ajouter = document.getElementById("plus");
-const originalForm = document.getElementById("reservationForm"); // Utiliser l'ID du formulaire
-
+const originalForm = document.getElementById("reservationForm"); 
 ajouter.addEventListener("click", ajouterForm);
 submit.addEventListener("click", enregistrerForm);
 

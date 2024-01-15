@@ -9,4 +9,11 @@ Structuration du projet :
 
     2-Creation du css 
 
-    3- Creation du fichier JS pour pouvoir rajouter les places 
+    3- a.rajouter les champs du formulaire  quand on clique sur plus et limiter a 3
+       b.cacher les dates qui ont deja etait selectionner
+       c.une alerte a la validation du formulaire 
+
+Question
+    1 - est ce que cloner le formulaire est une bonne methode pour pouvoir rajouter les champs ou alors de creer les 
+    champs au prealable et de les afficher quand on clique sur le plus serait plus adapter 
+    2 - J'ai une diffculter a deplacer le bouton + et le bouton de validation quand j'ajoute les champs 
