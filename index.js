@@ -1,14 +1,34 @@
 let submit = document.getElementById("reserver");
-const ajouter = document.getElementById("plus");
+const dates = [
+    document.getElementById("date1"),
+    document.getElementById("date2"),
+    document.getElementById("date3"),
+]
+const places = document.getElementById("nombrePlaces")
+const btn = document.getElementById("plus");
 const originalForm = document.getElementById("reservationForm"); 
-ajouter.addEventListener("click", ajouterForm);
+
+
+btn.addEventListener("click", ajouterChamps);
 submit.addEventListener("click", enregistrerForm);
 
-function ajouterForm() {
-    const addedForm = originalForm.cloneNode(true);
-    originalForm.parentNode.insertBefore(addedForm, originalForm.nextSibling);
+function ajouterChamps() {
+
+    
+
 }
 
+console.log(dates)
 function enregistrerForm() {
     alert("Merci d'avoir enregistré les dates et les places.");
+    console.log(dates)
 }
+
+function addElement(){
+
+
+
+const newInput = document.createElement("input")
+document.body.insertBefore(newInput, places)
+}
+
