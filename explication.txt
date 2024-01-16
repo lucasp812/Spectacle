@@ -6,6 +6,12 @@ on clique sur +. Quand on clique sur + 2 nouveau champs de formulaire apparait e
 On ne peut plus selectionner les places qu'on a deja enregistrer. On peut ajouter des places jusqu'a qu'il n'y est plus de
 places, le bouton plus disparait. On a la possibilité aussi de supprimer des places avec le bouton de suppresion.
 
+TODO : 
+- incrementer les id a chaque ajout d'element
+- masquer les dates deja selectionner
+- faire le bouton suppresion
+- griser les dates deja selectionner
+
 
 Structuration du projet : 
 
