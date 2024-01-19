@@ -25,22 +25,33 @@ function enregistrerForm() {
     console.log(dates)
 }
 
+
+let counter = 1;
+
 function addElement() {
     const newDiv = document.createElement("div");
+
+    const dateId = "date" + counter;
+    const nombrePlacesId = "nombrePlaces" + counter;
+
     newDiv.innerHTML = `
         <div>
-            <label for="date">Choisissez une date :</label>
-            <select name="date" id="date">
-                <option value="date1" id="date1">10 fevrier 2024</option>
-                <option value="date2" id="date2">15 fevrier 2024</option>
-                <option value="date3" id="date3">20 fevrier 2024</option>
+            <label for="${dateId}">Choisissez une date :</label>
+            <select name="date" id="${dateId}">
+                <option value="${dateId}1">10 février 2024</option>
+                <option value="${dateId}2">15 février 2024</option>
+                <option value="${dateId}3">20 février 2024</option>
             </select>
             <br>
-            <label for="nombrePlaces">Nombre de places :</label>
-            <input type="number" name="nombrePlaces" id="nombrePlaces" min="1" required>
+            <label for="${nombrePlacesId}">Nombre de places :</label>
+            <input type="number" name="nombrePlaces" id="${nombrePlacesId}" min="1" required>
         </div>
     `;
+
+    counter++;
+
     originalForm.insertBefore(newDiv, btn);
 }
+
 
 
