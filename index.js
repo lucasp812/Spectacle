@@ -1,86 +1,78 @@
 let submit = document.getElementById("reserver");
-const dates = new Map([
-    ["date1", document.getElementById("date1")],
-    ["date2", document.getElementById("date2")],
-    ["date3", document.getElementById("date3")]
-]);
+let btn = document.getElementById("plus");
+let originalForm = document.getElementById("reservationForm"); 
+let counter = 1;
+let selectedDates = [];
 
-const places = document.getElementById("nombrePlaces")
-const nbrplace = document.getElementById("nombrePlaces").value
-const btn = document.getElementById("plus");
-const originalForm = document.getElementById("reservationForm"); 
-
-btn.addEventListener("click", ajouterChamps);
-submit.addEventListener("click", enregistrerForm);
-
-// Récupérez les éléments
-let date = document.getElementById("date");
-
-// Désactivez les boutons au chargement de la page
 window.onload = function() {
     btn.disabled = true;
     submit.disabled = true;
 }
 
-// Ajoutez un écouteur d'événements pour vérifier si les deux champs ont des valeurs
-date.addEventListener("change", checkInputs);
-places.addEventListener("change", checkInputs);
+btn.addEventListener("click", ajouterChamps);
+submit.addEventListener("click", enregistrerForm);
 
-function checkInputs() {
-    // Si les deux champs ont des valeurs, activez les boutons
+function checkInputs(date, places) {
     if (date.value && places.value) {
-        btn.disabled = false;
+        if (!selectedDates.includes(date.value)) {
+            selectedDates.push(date.value);
+        }
+        if (selectedDates.includes("date1") && selectedDates.includes("date2") && selectedDates.includes("date3")) {
+            btn.disabled = true;
+            btn.classList.add("disabled");
+        } else {
+            btn.disabled = false;
+            btn.classList.remove("disabled");
+        }
         submit.disabled = false;
+        submit.classList.remove("disabled");
     } else {
-        // Sinon, désactivez les boutons
         btn.disabled = true;
         submit.disabled = true;
+        btn.classList.add("disabled");
+        submit.classList.add("disabled");
     }
 }
+
 
 function ajouterChamps() {
     addElement()
 }
 
-places.addEventListener("keypress", disable())
-
-function disable(){
-    console.log(nbrplace)
-    if (nbrplace < 0){
-        btn.classList.add("disable")
-        plus.classList.add("disable")
-    }
-}
-
-console.log(dates)
 function enregistrerForm() {
     alert("Merci d'avoir enregistré les dates et les places.");
-    console.log(dates)
 }
-
-let counter = 1;
 
 function addElement() {
     const newDiv = document.createElement("div");
-
     const dateId = "date" + counter;
     const nombrePlacesId = "nombrePlaces" + counter;
 
-    newDiv.innerHTML = `
-        <div>
-            <label for="${dateId}">Choisissez une date :</label>
-            <select name="date" id="${dateId}">
-                <option value="${dateId}1" id=${dateId}1>10 février 2024</option>
-                <option value="${dateId}2" id=${dateId}2>15 février 2024</option>
-                <option value="${dateId}3" id=${dateId}2>20 février 2024</option>
-            </select>
-            <br>
-            <label for="${nombrePlacesId}">Nombre de places :</label>
-            <input type="number" name="nombrePlaces" id="${nombrePlacesId}" min="1" required>
-        </div>
-    `;
-    console.log(dateId)
+newDiv.innerHTML = `
+    <div>
+        <label for="${dateId}">Choisissez une date :</label>
+        <select name="date" id="${dateId}">
+            <option value="" disabled selected>Choisissez une date</option>
 
+            <option value="date1" id=${dateId}1 ${selectedDates.includes("date1") ? "hidden" : ""}>10 février 2024</option>
+            <option value="date2" id=${dateId}2 ${selectedDates.includes("date2") ? "hidden" : ""}>15 février 2024</option>
+            <option value="date3" id=${dateId}3 ${selectedDates.includes("date3") ? "hidden" : ""}>20 février 2024</option>
+        </select>
+        <br>
+        <label for="${nombrePlacesId}">Nombre de places :</label>
+        <input type="number" name="nombrePlaces" id="${nombrePlacesId}" min="1" required>
+    </div>
+`;
     counter++;
     originalForm.insertBefore(newDiv, btn);
+
+    let date = document.getElementById(dateId);
+    let places = document.getElementById(nombrePlacesId);
+
+    date.addEventListener("change", function() { checkInputs(date, places); });
+    places.addEventListener("change", function() { checkInputs(date, places); });
 }
+let date = document.getElementById("date");
+let places = document.getElementById("nombrePlaces");
+date.addEventListener("change", function() { checkInputs(date, places); });
+places.addEventListener("change", function() { checkInputs(date, places); });

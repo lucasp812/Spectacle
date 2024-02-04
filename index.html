@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
@@ -9,20 +9,23 @@
 <body>
     <h1>Réservation de place de spectacle</h1>
     <form method="post" id="reservationForm"> 
-        <div>
-        <label for="date">Choisissez une date :</label>
-        <select name="date" id="date">
-            <option value="date1" id="date1">10 fevrier 2024</option>
-            <option value="date2" id="date2">15 fevrier 2024</option>
-            <option value="date3" id="date3">20 fevrier 2024</option>
-        </select>
+        <div id="reservationContainer">
+            <label for="date">Choisissez une date :</label>
+            <select name="date" id="date">
+                <option value="" disabled selected>Choisissez une date</option>
+                <option value="date1">10 février 2024</option>
+                <option value="date2">15 février 2024</option>
+                <option value="date3">20 février 2024</option>
+            </select>
+            <br>
+            <label for="nombrePlaces">Nombre de places :</label>
+            <input type="number" name="nombrePlaces" id="nombrePlaces" min="1" required>
+            <br>
+            <input type="button" class="deleteReservation" value="Supprimer">
+        </div>
         <br>
-        <label for="nombrePlaces">Nombre de places :</label>
-        <input type="number" name="nombrePlaces" id="nombrePlaces" min="1" required>
-    </div>
         <br>
-        <br>
-        <input type="button" name="" id="plus" class="disable" value="+">
+        <input type="button" name="" id="plus" class="disabled" value="+">
         <br>
         <input type="submit" value="Réserver" id="reserver" class="btnOn" class="disable" >
     </form>

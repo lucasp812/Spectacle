@@ -69,7 +69,6 @@ input[type="submit"]:hover {
     width: 50px; /* Ajustez la largeur selon vos besoins */
     height: 50px; /* Ajustez la hauteur selon vos besoins */
     border-radius: 50%; /* Rend le bouton rond */
-    background-color: #3ec74c;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -80,7 +79,13 @@ input[type="submit"]:hover {
     margin: 0 auto; /* Centre le bouton horizontalement */
 }
 
-#plus:hover {
-    background-color: #5645a0;
+
+
+button:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
+.deleteReservation {
+    display: none; /* Par défaut, le bouton de suppression est caché */
+}
