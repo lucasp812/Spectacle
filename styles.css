@@ -51,35 +51,27 @@ input[type="button"] {
     background-color: #3ec74c;
 }
 
-
 input[type="button"]:hover {
     background-color: #5645a0;
 }
-
 
 input[type="submit"]:hover {
     background-color: #5645a0;
 }
 
-/* Ajoutez ces styles à la fin de votre fichier CSS */
-
-/* Ajoutez ces styles à la fin de votre fichier CSS */
-
 #plus {
-    width: 50px; /* Ajustez la largeur selon vos besoins */
-    height: 50px; /* Ajustez la hauteur selon vos besoins */
-    border-radius: 50%; /* Rend le bouton rond */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 24px; /* Ajustez la taille de la police selon vos besoins */
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centre le bouton horizontalement */
+    margin: 0 auto;
 }
-
-
 
 button:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
     background-color: #ccc;
@@ -87,5 +79,27 @@ button:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
 }
 
 .deleteReservation {
-    display: none; /* Par défaut, le bouton de suppression est caché */
+    display: none;
+}
+
+/* Style pour le bouton de suppression */
+.deleteButton {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #da190b;
+}
+
+.hidden {
+    display: none;
 }
