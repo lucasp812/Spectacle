@@ -25,7 +25,11 @@ Structuration du projet :
        b.cacher les dates qui ont deja etait selectionner
        c.une alerte a la validation du formulaire 
 
-Question
-    1 - est ce que cloner le formulaire est une bonne methode pour pouvoir rajouter les champs ou alors de creer les 
-    champs au prealable et de les afficher quand on clique sur le plus serait plus adapter 
-    2 - J'ai une diffculter a deplacer le bouton + et le bouton de validation quand j'ajoute les champs 
+    4 -  incrementer les id a chaque ajout d'element
+    
+    5 -  masquer les dates deja selectionner
+
+    
+    6 -  faire le bouton suppresion
+
+

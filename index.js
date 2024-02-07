@@ -118,5 +118,6 @@ function deleteReservation(button) {
         }
     });
 }
+
 date.addEventListener("change", function() { checkInputs(date, places, deleteButton); });
 places.addEventListener("change", function() { checkInputs(date, places, deleteButton); });
